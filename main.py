@@ -17,7 +17,7 @@ def create_new_user(class_name, user: str, password: str) -> User | None:
     """
     return User(user, password)
 
-def insert_new_user():
+def insert_new_user(U: User, u: str, p: str) -> None:
     """
     function insert new user to sql table
     """
@@ -32,6 +32,10 @@ def insert_new_user():
 #
 # c.execute("INSERT INTO users VALUES (:name, :password)", {'name': user_3.name, 'password': user_3.password})
 # conn.commit()
+
+user_name = input('Name: ')
+password_entry = input('Password: ')
+insert_new_user(User, user_name, password_entry)
 
 c.execute("SELECT * FROM users")
 print(c.fetchall())
