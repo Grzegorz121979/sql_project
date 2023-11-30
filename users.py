@@ -13,3 +13,11 @@ class User:
     @name.setter
     def name(self, value):
         self._name = value
+
+    @property
+    def password(self):
+        return self._password
+
+    @password.setter
+    def password(self, value):
+        self._password = value
