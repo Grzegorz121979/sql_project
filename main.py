@@ -11,6 +11,12 @@ user_1 = User('Greg', '123')
 user_2 = User('Tom', '456')
 user_3 = User('Sue', '789')
 
+def create_new_user(class_name, user: str, password: str) -> User | None:
+    """
+    function to create new instans User class
+    """
+    return User(user, password)
+
 # c.execute("INSERT INTO users VALUES (:name, :password)", {'name': user_1.name, 'password': user_1.password})
 # conn.commit()
 #
