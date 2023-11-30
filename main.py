@@ -21,7 +21,8 @@ def insert_new_user():
     """
     function insert new user to sql table
     """
-    pass
+    with conn:
+        c.execute("INSERT INTO users VALUES (:user, :password)", {'user': create_new_user(U, u, p).name, 'password': create_new_user(U, u, p).password})
 
 # c.execute("INSERT INTO users VALUES (:name, :password)", {'name': user_1.name, 'password': user_1.password})
 # conn.commit()
