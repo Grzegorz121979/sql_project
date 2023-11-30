@@ -5,3 +5,11 @@ class User:
 
     def __str__(self):
         return f'{self.name}, {self.password}'
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value
