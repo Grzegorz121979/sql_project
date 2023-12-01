@@ -1,4 +1,3 @@
-"""Class User"""
 import re
 
 class User:
